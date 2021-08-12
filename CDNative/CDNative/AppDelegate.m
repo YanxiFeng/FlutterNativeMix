@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import <FlutterBoost.h>
+#import "MyFlutterBoostDelegate.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    MyFlutterBoostDelegate *delegate = [[MyFlutterBoostDelegate alloc ] init];
+    [[FlutterBoost instance] setup:application delegate:delegate callback:^(FlutterEngine *engine){
+        
+    }];
     return YES;
 }
 

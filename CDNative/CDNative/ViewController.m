@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import <FlutterBoost.h>
 
 @interface ViewController ()
 
@@ -16,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)routeFlutterHomeView:(UIButton *)sender {
+    [[FlutterBoost instance] open:@"/" arguments:@{@"animated":@(YES)}];
 }
 
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		3C7CF5F026C3E1A100647223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5EF26C3E1A100647223 /* Assets.xcassets */; };
 		3C7CF5F326C3E1A100647223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5F126C3E1A100647223 /* LaunchScreen.storyboard */; };
 		3C7CF5F626C3E1A100647223 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CF5F526C3E1A100647223 /* main.m */; };
+		3C8D042326C570A100853335 /* MyFlutterBoostDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D042226C570A100853335 /* MyFlutterBoostDelegate.m */; };
 		41A5201EDD9F7D7AE3E47886 /* Pods_CDNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD34F9881941CA90FCC69544 /* Pods_CDNative.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		3C7CF5F226C3E1A100647223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C7CF5F426C3E1A100647223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7CF5F526C3E1A100647223 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C8D042126C570A100853335 /* MyFlutterBoostDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFlutterBoostDelegate.h; sourceTree = "<group>"; };
+		3C8D042226C570A100853335 /* MyFlutterBoostDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFlutterBoostDelegate.m; sourceTree = "<group>"; };
 		74FA914D39DA6D9E6EA81DA0 /* Pods-CDNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNative.debug.xcconfig"; path = "Target Support Files/Pods-CDNative/Pods-CDNative.debug.xcconfig"; sourceTree = "<group>"; };
 		8718943B59A7AA77FBDBAD3A /* Pods-CDNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNative.release.xcconfig"; path = "Target Support Files/Pods-CDNative/Pods-CDNative.release.xcconfig"; sourceTree = "<group>"; };
 		DD34F9881941CA90FCC69544 /* Pods_CDNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +56,6 @@
 				74FA914D39DA6D9E6EA81DA0 /* Pods-CDNative.debug.xcconfig */,
 				8718943B59A7AA77FBDBAD3A /* Pods-CDNative.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +86,8 @@
 				3C7CF5E726C3E19E00647223 /* SceneDelegate.m */,
 				3C7CF5E926C3E19E00647223 /* ViewController.h */,
 				3C7CF5EA26C3E19E00647223 /* ViewController.m */,
+				3C8D042126C570A100853335 /* MyFlutterBoostDelegate.h */,
+				3C8D042226C570A100853335 /* MyFlutterBoostDelegate.m */,
 				3C7CF5EC26C3E19E00647223 /* Main.storyboard */,
 				3C7CF5EF26C3E1A100647223 /* Assets.xcassets */,
 				3C7CF5F126C3E1A100647223 /* LaunchScreen.storyboard */,
@@ -228,6 +232,7 @@
 				3C7CF5EB26C3E19E00647223 /* ViewController.m in Sources */,
 				3C7CF5E526C3E19E00647223 /* AppDelegate.m in Sources */,
 				3C7CF5F626C3E1A100647223 /* main.m in Sources */,
+				3C8D042326C570A100853335 /* MyFlutterBoostDelegate.m in Sources */,
 				3C7CF5E826C3E19E00647223 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -62,6 +62,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_boost:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "v3.0-hotfixes"
+      resolved-ref: e899fa6c23f1778cec1ace7fcb1a9b07f3abe821
+      url: "https://github.com/alibaba/flutter_boost.git"
+    source: git
+    version: "3.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
