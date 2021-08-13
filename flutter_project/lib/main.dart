@@ -1,12 +1,31 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_boost/flutter_boost_app.dart';
-import 'package:flutter_project/pages/home.dart';
-import 'package:flutter_project/pages/simple.dart';
+import 'package:flutter_boost/flutter_boost.dart';
 
 void main() {
+  CustomFlutterBinding();
   runApp(MyApp());
 }
+
+/// 错误为空界面
+class WrongRouterWidget extends StatelessWidget {
+  const WrongRouterWidget({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Chope App',
+      home: Scaffold(
+        body: Center(
+          child: Text('Route not found!'),
+        ),
+      ),
+    );
+  }
+}
+
+///创建一个自定义的Binding，继承和with的关系如下，里面什么都不用写
+class CustomFlutterBinding extends WidgetsFlutterBinding
+    with BoostFlutterBinding {}
 
 class MyApp extends StatefulWidget {
   @override
@@ -15,30 +34,48 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   static Map<String, FlutterBoostRouteFactory> routerMap = {
-    '/': (settings, uniqueId) {
+    'test': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => HomePageScreen());
+          settings: settings, pageBuilder: (_, __, ___) => WrongRouterWidget());
     },
-    'embedded': (settings, uniqueId) {
+
+    ///透明弹窗页面
+    'dialogPage': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => SimplePageScreen());
-    }
+
+          ///透明弹窗页面这个需要是false
+          opaque: false,
+
+          ///背景蒙版颜色
+          barrierColor: Colors.black12,
+          settings: settings,
+          pageBuilder: (_, __, ___) => WrongRouterWidget());
+    },
   };
-  Route<dynamic>? routeFactory(RouteSettings settings, String uniqueId) {
-    FlutterBoostRouteFactory? func = routerMap[settings.name];
+
+  _MyAppState();
+
+  Route<dynamic> routeFactory(RouteSettings settings, String uniqueId) {
+    FlutterBoostRouteFactory func = routerMap[settings.name];
     if (func == null) {
       return null;
     }
+
     return func(settings, uniqueId);
   }
 
-  @override
-  void initState() {
-    super.initState();
+  Widget appBuilder(Widget home) {
+    return MaterialApp(
+      home: home,
+      debugShowCheckedModeBanner: true,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return FlutterBoostApp(routeFactory);
+    return FlutterBoostApp(
+      routeFactory,
+      appBuilder: appBuilder,
+    );
   }
 }

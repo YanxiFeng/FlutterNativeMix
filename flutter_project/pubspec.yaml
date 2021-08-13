@@ -15,18 +15,21 @@ description: A new flutter module project.
 # This version is used _only_ for the Runner app, which is used if you just do
 # a `flutter run` or a `flutter make-host-app-editable`. It has no impact
 # on any other native host app that you embed your Flutter project into.
-version: 1.0.0+1
+version: 8.9.0
+publish_to: none
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  
   flutter_boost:
     git:
-        url: 'https://github.com/alibaba/flutter_boost.git'
-        ref: 'v3.0-hotfixes'
+      url: 'https://github.com/alibaba/flutter_boost.git'
+      ref: 'v3.0-preview.7'
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
