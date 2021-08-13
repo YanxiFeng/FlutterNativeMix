@@ -19,7 +19,9 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)routeFlutterHomeView:(UIButton *)sender {
-    [[FlutterBoost instance] open:@"/" arguments:@{@"animated":@(YES)}];
+    FlutterBoostRouteOptions *options = [[FlutterBoostRouteOptions alloc] init];
+    options.pageName = @"test";
+    [[FlutterBoost instance] open:options];
 }
 
 

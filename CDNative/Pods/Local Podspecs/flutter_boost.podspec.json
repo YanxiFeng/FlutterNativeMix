@@ -20,7 +20,7 @@
     "Classes/FlutterBoostPlugin.h",
     "Classes/container/FBFlutterViewContainer.h",
     "Classes/container/FBFlutterContainer.h",
-    "Classes/FlutterBoostOptions.h",
+    "Classes/Options.h",
     "Classes/messages.h"
   ],
   "dependencies": {
