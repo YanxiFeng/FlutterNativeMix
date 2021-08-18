@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"首页 Native";
 }
 
 - (IBAction)routeFlutterHomeView:(UIButton *)sender {
@@ -26,7 +27,7 @@
 //    [[FlutterBoost instance] open:options];
     
     FlutterBoostRouteOptions *options = [FlutterBoostRouteOptions new];
-    options.pageName = @"test";
+    options.pageName = @"home";
     BoostBaseViewController *vc = BoostBaseViewController.new;
     vc.hidesBottomBarWhenPushed = YES;
     [vc setName:options.pageName uniqueId:options.uniqueId params:options.arguments opaque:options.opaque];

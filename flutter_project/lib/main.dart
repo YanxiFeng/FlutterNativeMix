@@ -1,26 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_project/pages/home.dart';
+import 'package:flutter_project/pages/simple.dart';
 
 void main() {
   CustomFlutterBinding();
   runApp(MyApp());
-}
-
-/// 错误为空界面
-class WrongRouterWidget extends StatelessWidget {
-  const WrongRouterWidget({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Chope App',
-      home: Scaffold(
-        body: Center(
-          child: Text('Route not found!'),
-        ),
-      ),
-    );
-  }
 }
 
 ///创建一个自定义的Binding，继承和with的关系如下，里面什么都不用写
@@ -34,22 +19,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   static Map<String, FlutterBoostRouteFactory> routerMap = {
-    'test': (settings, uniqueId) {
+    'home': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => WrongRouterWidget());
+          settings: settings, pageBuilder: (_, __, ___) => HomePageScreen());
     },
-
-    ///透明弹窗页面
-    'dialogPage': (settings, uniqueId) {
+    'simple': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
-
-          ///透明弹窗页面这个需要是false
-          opaque: false,
-
-          ///背景蒙版颜色
-          barrierColor: Colors.black12,
-          settings: settings,
-          pageBuilder: (_, __, ___) => WrongRouterWidget());
+          settings: settings, pageBuilder: (_, __, ___) => SimplePageScreen());
     },
   };
 
