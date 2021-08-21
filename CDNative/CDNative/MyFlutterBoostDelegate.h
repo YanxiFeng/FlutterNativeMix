@@ -11,8 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyFlutterBoostDelegate : NSObject<FlutterBoostDelegate>
+
 @property (nonatomic,strong) UINavigationController *navigationController;
 @property (nonatomic,strong) FlutterBoostRouteOptions *options;
+
++ (instancetype)sharedBoostDelegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

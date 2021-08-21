@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    MyFlutterBoostDelegate *delegate = [[MyFlutterBoostDelegate alloc ] init];
+    MyFlutterBoostDelegate *delegate = [MyFlutterBoostDelegate sharedBoostDelegate];
     [[FlutterBoost instance] setup:application delegate:delegate callback:^(FlutterEngine *engine){
         
     }];

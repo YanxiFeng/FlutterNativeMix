@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import <FlutterBoost.h>
 #import "BoostBaseViewController.h"
+#import "MyFlutterBoostDelegate.h"
 
 @interface ViewController ()
 
@@ -28,12 +29,9 @@
     
     FlutterBoostRouteOptions *options = [FlutterBoostRouteOptions new];
     options.pageName = @"home";
-    BoostBaseViewController *vc = BoostBaseViewController.new;
-    vc.hidesBottomBarWhenPushed = YES;
-    [vc setName:options.pageName uniqueId:options.uniqueId params:options.arguments opaque:options.opaque];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:navigationController animated:YES completion:nil];
+    [MyFlutterBoostDelegate sharedBoostDelegate].navigationController = self.navigationController;
+    [[MyFlutterBoostDelegate sharedBoostDelegate] pushFlutterRoute:options];
+    
 }
 
 
