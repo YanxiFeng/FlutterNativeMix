@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C419A0626D668C900E9024F /* CDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C419A0526D668C900E9024F /* CDHomeViewController.m */; };
 		3C7CF5E526C3E19E00647223 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CF5E426C3E19E00647223 /* AppDelegate.m */; };
-		3C7CF5EB26C3E19E00647223 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CF5EA26C3E19E00647223 /* ViewController.m */; };
 		3C7CF5EE26C3E19E00647223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5EC26C3E19E00647223 /* Main.storyboard */; };
 		3C7CF5F026C3E1A100647223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5EF26C3E1A100647223 /* Assets.xcassets */; };
 		3C7CF5F326C3E1A100647223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5F126C3E1A100647223 /* LaunchScreen.storyboard */; };
@@ -19,11 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C419A0426D668C900E9024F /* CDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDHomeViewController.h; sourceTree = "<group>"; };
+		3C419A0526D668C900E9024F /* CDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDHomeViewController.m; sourceTree = "<group>"; };
 		3C7CF5E026C3E19E00647223 /* CDNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7CF5E326C3E19E00647223 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C7CF5E426C3E19E00647223 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C7CF5E926C3E19E00647223 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3C7CF5EA26C3E19E00647223 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C7CF5ED26C3E19E00647223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C7CF5EF26C3E1A100647223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C7CF5F226C3E1A100647223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		3C419A0126D6667B00E9024F /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
-				3C7CF5E926C3E19E00647223 /* ViewController.h */,
-				3C7CF5EA26C3E19E00647223 /* ViewController.m */,
+				3C419A0426D668C900E9024F /* CDHomeViewController.h */,
+				3C419A0526D668C900E9024F /* CDHomeViewController.m */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -261,10 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C7CF5EB26C3E19E00647223 /* ViewController.m in Sources */,
 				3C7CF5E526C3E19E00647223 /* AppDelegate.m in Sources */,
 				3C7CF5F626C3E1A100647223 /* main.m in Sources */,
 				3C8F3D5226C75FF1007FCB3B /* BoostBaseViewController.m in Sources */,
+				3C419A0626D668C900E9024F /* CDHomeViewController.m in Sources */,
 				3C8D042326C570A100853335 /* CDFlutterBoost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

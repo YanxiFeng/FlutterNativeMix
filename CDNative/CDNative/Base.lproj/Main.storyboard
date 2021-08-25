@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-1086" y="1"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CDHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,15 +42,27 @@
                                     <action selector="routeFlutterHomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEZ-fs-XI0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-tt-ZCg">
+                                <rect key="frame" x="137.5" y="356" width="139" height="30"/>
+                                <state key="normal" title="send event to flutter"/>
+                                <connections>
+                                    <action selector="sendEventToFlutter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFn-6o-58D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1nU-tt-ZCg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IEi-0p-gSt"/>
                             <constraint firstItem="KcB-fl-3Sg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="e4S-Xw-XmG"/>
                             <constraint firstItem="KcB-fl-3Sg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbp-dR-fNt"/>
+                            <constraint firstItem="1nU-tt-ZCg" firstAttribute="top" secondItem="KcB-fl-3Sg" secondAttribute="bottom" constant="93" id="rXY-dQ-AVz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cqz-Ma-43y"/>
+                    <connections>
+                        <outlet property="sendEventBtn" destination="1nU-tt-ZCg" id="95m-Ee-NpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
