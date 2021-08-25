@@ -5,10 +5,10 @@
 //  Created by Yvan Feng on 2021/8/12.
 //
 
-#import "MyFlutterBoostDelegate.h"
+#import "CDFlutterBoost.h"
 #import "BoostBaseViewController.h"
 
-@implementation MyFlutterBoostDelegate
+@implementation CDFlutterBoost
 
 /// 如果框架发现您输入的路由表在flutter里面注册的路由表中找不到，那么就会调用此方法来push一个纯原生页面
 - (void)pushNativeRoute:(NSString *)pageName arguments:(NSDictionary *)arguments{
@@ -41,11 +41,11 @@
 }
 
 + (instancetype)sharedBoostDelegate {
-    static MyFlutterBoostDelegate *instance;
+    static CDFlutterBoost *instance;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         if (!instance) {
-            instance = [[MyFlutterBoostDelegate alloc] init];
+            instance = [[CDFlutterBoost alloc] init];
         }
     });
     return instance;

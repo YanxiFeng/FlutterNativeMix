@@ -10,5 +10,7 @@ target 'CDNative' do
 
   # Pods for CDNative
   install_all_flutter_pods(flutter_application_path)
+  
+  pod 'AFNetworking'
 
 end

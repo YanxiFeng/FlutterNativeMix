@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <FlutterBoost.h>
 #import "BoostBaseViewController.h"
-#import "MyFlutterBoostDelegate.h"
+#import "CDFlutterBoost.h"
 
 @interface ViewController ()
 
@@ -29,8 +29,8 @@
     
     FlutterBoostRouteOptions *options = [FlutterBoostRouteOptions new];
     options.pageName = @"home";
-    [MyFlutterBoostDelegate sharedBoostDelegate].navigationController = self.navigationController;
-    [[MyFlutterBoostDelegate sharedBoostDelegate] pushFlutterRoute:options];
+    [CDFlutterBoost sharedBoostDelegate].navigationController = self.navigationController;
+    [[CDFlutterBoost sharedBoostDelegate] pushFlutterRoute:options];
     
 }
 
