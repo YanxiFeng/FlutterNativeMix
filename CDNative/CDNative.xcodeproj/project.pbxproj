@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C419A0626D668C900E9024F /* CDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C419A0526D668C900E9024F /* CDHomeViewController.m */; };
+		3C419A0C26D7B69300E9024F /* CDProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C419A0B26D7B69300E9024F /* CDProfileViewController.m */; };
 		3C7CF5E526C3E19E00647223 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CF5E426C3E19E00647223 /* AppDelegate.m */; };
 		3C7CF5EE26C3E19E00647223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5EC26C3E19E00647223 /* Main.storyboard */; };
 		3C7CF5F026C3E1A100647223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF5EF26C3E1A100647223 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		3C419A0426D668C900E9024F /* CDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDHomeViewController.h; sourceTree = "<group>"; };
 		3C419A0526D668C900E9024F /* CDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDHomeViewController.m; sourceTree = "<group>"; };
+		3C419A0A26D7B69300E9024F /* CDProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDProfileViewController.h; sourceTree = "<group>"; };
+		3C419A0B26D7B69300E9024F /* CDProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDProfileViewController.m; sourceTree = "<group>"; };
 		3C7CF5E026C3E19E00647223 /* CDNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7CF5E326C3E19E00647223 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C7CF5E426C3E19E00647223 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +98,15 @@
 			path = HomeModule;
 			sourceTree = "<group>";
 		};
+		3C419A0926D7B68000E9024F /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				3C419A0A26D7B69300E9024F /* CDProfileViewController.h */,
+				3C419A0B26D7B69300E9024F /* CDProfileViewController.m */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
 		3C7CF5D726C3E19E00647223 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,7 @@
 		3C7CF5E226C3E19E00647223 /* CDNative */ = {
 			isa = PBXGroup;
 			children = (
+				3C419A0926D7B68000E9024F /* ProfileModule */,
 				3C419A0126D6667B00E9024F /* HomeModule */,
 				3C4199FE26D6661200E9024F /* BaseModule */,
 				3C7CF5E326C3E19E00647223 /* AppDelegate.h */,
@@ -264,6 +277,7 @@
 				3C7CF5E526C3E19E00647223 /* AppDelegate.m in Sources */,
 				3C7CF5F626C3E1A100647223 /* main.m in Sources */,
 				3C8F3D5226C75FF1007FCB3B /* BoostBaseViewController.m in Sources */,
+				3C419A0C26D7B69300E9024F /* CDProfileViewController.m in Sources */,
 				3C419A0626D668C900E9024F /* CDHomeViewController.m in Sources */,
 				3C8D042326C570A100853335 /* CDFlutterBoost.m in Sources */,
 			);

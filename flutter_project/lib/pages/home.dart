@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/boost_navigator.dart';
 import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_project/pages/simple.dart';
 
 class HomePageScreen extends StatefulWidget {
   @override
@@ -9,15 +10,15 @@ class HomePageScreen extends StatefulWidget {
 
 class _HomePageScreenState extends State<HomePageScreen> {
   ///声明一个用来存回调的对象
-  VoidCallback removeListener;
-  String _text = "0";
+  VoidCallback nativeListener;
+  String _text = "text";
 
   @override
   void initState() {
     super.initState();
 
     ///添加事件响应者,监听native发往flutter端的事件
-    removeListener = BoostChannel.instance.addEventListener("NativeEventKey",
+    nativeListener = BoostChannel.instance.addEventListener("NativeEventKey",
         (key, arguments) {
       _text = key;
       return;
@@ -27,7 +28,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   void dispose() {
     super.dispose();
-    removeListener.call();
+    nativeListener.call();
   }
 
   @override
@@ -45,6 +46,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
         child: Column(
           children: [
             Text(_text),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => SimplePageScreen()));
+                },
+                child: Icon(Icons.book_online)),
             ElevatedButton(
                 onPressed: () {
                   // 发送事件给native

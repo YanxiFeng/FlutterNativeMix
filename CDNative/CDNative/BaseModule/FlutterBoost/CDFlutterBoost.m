@@ -7,12 +7,16 @@
 
 #import "CDFlutterBoost.h"
 #import "BoostBaseViewController.h"
+#import "CDProfileViewController.h"
 
 @implementation CDFlutterBoost
 
-/// 如果框架发现您输入的路由表在flutter里面注册的路由表中找不到，那么就会调用此方法来push一个纯原生页面
+/// Flutter push 原生页面
 - (void)pushNativeRoute:(NSString *)pageName arguments:(NSDictionary *)arguments{
-    
+    if ([pageName isEqualToString:@"ProfileViewController"]) {
+        CDProfileViewController *profileVC = [[CDProfileViewController alloc] init];
+        [self.navigationController pushViewController:profileVC animated:YES];
+    }
 }
 
 /// 当框架的withContainer为true的时候，会调用此方法来做原生的push

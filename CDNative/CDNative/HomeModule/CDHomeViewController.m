@@ -13,7 +13,6 @@
 @interface CDHomeViewController ()
 
 @property (copy, nonatomic) FBVoidCallback removeListener;
-@property (weak, nonatomic) IBOutlet UIButton *sendEventBtn;
 
 @end
 
@@ -27,7 +26,7 @@
     //接收Flutter事件
     self.removeListener = [[FlutterBoost instance] addEventListener:^(NSString *name, NSDictionary *arguments) {
         NSLog(@"========= %@ - %@",name,arguments);
-        [self.sendEventBtn setTitle:name forState:UIControlStateNormal];
+        
     } forName:@"FlutterEventToNative"];
 }
 
@@ -39,9 +38,6 @@
     [CDFlutterBoost sharedBoostDelegate].navigationController = self.navigationController;
     [[CDFlutterBoost sharedBoostDelegate] pushFlutterRoute:options];
     
-}
-- (IBAction)sendEventToFlutter:(UIButton *)sender {
-    [[FlutterBoost instance] sendEventToFlutterWith:@"NativeEventKey" arguments:@{@"key1":@"我是iOS来的"}];
 }
 
 @end
