@@ -42,15 +42,26 @@
                                     <action selector="routeFlutterHomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEZ-fs-XI0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju8-Pg-ZAD">
+                                <rect key="frame" x="186" y="342" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ju8-Pg-ZAD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bT9-Bz-fuU"/>
                             <constraint firstItem="KcB-fl-3Sg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="e4S-Xw-XmG"/>
+                            <constraint firstItem="ju8-Pg-ZAD" firstAttribute="top" secondItem="KcB-fl-3Sg" secondAttribute="bottom" constant="79" id="jKy-UP-9we"/>
                             <constraint firstItem="KcB-fl-3Sg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbp-dR-fNt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cqz-Ma-43y"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="ju8-Pg-ZAD" id="Y4o-3c-QL7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

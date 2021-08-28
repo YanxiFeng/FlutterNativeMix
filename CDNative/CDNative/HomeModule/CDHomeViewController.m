@@ -13,6 +13,7 @@
 @interface CDHomeViewController ()
 
 @property (copy, nonatomic) FBVoidCallback removeListener;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 @end
 
@@ -26,7 +27,7 @@
     //接收Flutter事件
     self.removeListener = [[FlutterBoost instance] addEventListener:^(NSString *name, NSDictionary *arguments) {
         NSLog(@"========= %@ - %@",name,arguments);
-        
+        self.messageLabel.text = arguments[@"name"];
     } forName:@"FlutterEventToNative"];
 }
 

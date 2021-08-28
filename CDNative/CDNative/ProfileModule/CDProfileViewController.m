@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"个人信息";
+    self.title = @"个人信息 Native";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupSubviews];
@@ -32,7 +32,8 @@
 }
 
 - (void)sendEventToFlutter:(id)sender {
-    [[FlutterBoost instance] sendEventToFlutterWith:@"NativeEventKey" arguments:@{@"key1":@"我是iOS来的"}];
+    // 发送消息给Natvie
+    [[FlutterBoost instance] sendEventToFlutterWith:@"NativeEventKey" arguments:@{@"msg":@"我是iOS来的"}];
 }
 
 @end

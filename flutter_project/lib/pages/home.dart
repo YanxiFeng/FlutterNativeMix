@@ -9,27 +9,7 @@ class HomePageScreen extends StatefulWidget {
 }
 
 class _HomePageScreenState extends State<HomePageScreen> {
-  ///声明一个用来存回调的对象
-  VoidCallback nativeListener;
-  String _text = "text";
-
-  @override
-  void initState() {
-    super.initState();
-
-    ///添加事件响应者,监听native发往flutter端的事件
-    nativeListener = BoostChannel.instance.addEventListener("NativeEventKey",
-        (key, arguments) {
-      _text = key;
-      return;
-    });
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    nativeListener.call();
-  }
+  String _text = "Push -> Simple(Flutter)";
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +17,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
+              // pop到native，发送消息给natvie
               BoostNavigator.instance.pop();
             },
             icon: Icon(Icons.arrow_back_ios)),
@@ -51,14 +32,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => SimplePageScreen()));
                 },
-                child: Icon(Icons.book_online)),
+                child: Text(_text)),
             ElevatedButton(
                 onPressed: () {
                   // 发送事件给native
                   BoostChannel.instance.sendEventToNative(
-                      "FlutterEventToNative", {"key1": "value1"});
+                      "FlutterEventToNative", {"name": "Jason"});
                 },
-                child: Icon(Icons.accessibility_new))
+                child: Text("Send Event to Native"))
           ],
         ),
       ),
