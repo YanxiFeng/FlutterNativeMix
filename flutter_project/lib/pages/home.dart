@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_boost/boost_navigator.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_project/pages/simple.dart';
@@ -39,10 +40,24 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   BoostChannel.instance.sendEventToNative(
                       "FlutterEventToNative", {"name": "Jason"});
                 },
-                child: Text("Send Event to Native"))
+                child: Text("Send Event to Native")),
+            ElevatedButton(
+                onPressed: () {
+                  _requestDatasFromNative();
+                },
+                child: Text("Flutter method channel"))
           ],
         ),
       ),
     );
+  }
+
+  // 向native发送数据，并获取native返回的数据
+  _requestDatasFromNative() async {
+    String response = await MethodChannel("chope_flutter_method_channel")
+        .invokeMethod("profile.notification.page_init");
+    setState(() {
+      _text = response;
+    });
   }
 }
