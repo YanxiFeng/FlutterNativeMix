@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import <FlutterBoost.h>
 #import "CDFlutterBoost.h"
+#import "CDNetworkTool.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,14 @@
         [channel setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
             //Flutter侧发送过来的数据
             NSLog(@"FlutterMethodCall ===> %@", call.method);
-            //回调给Flutter侧
-            result(@"回调-返回数据");
+            
+            [[CDNetworkTool sharedInstance] GET:@"http://rap2api.chope.cc/app/mock/17/restaurants/list/yongtest" parameters:@{} headers:@{} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                //回调给Flutter侧
+                result(responseObject[@"return"][@"dish_module"][@"title"]);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                
+            }];
+            
         }];
     }];
     return YES;
