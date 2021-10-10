@@ -41,4 +41,11 @@
     
 }
 
+- (IBAction)routeFlutterSelectCity:(UIButton *)sender {
+    FlutterBoostRouteOptions *options = [FlutterBoostRouteOptions new];
+    options.pageName = @"select_city";
+    [CDFlutterBoost sharedBoostDelegate].navigationController = self.navigationController;
+    [[CDFlutterBoost sharedBoostDelegate] pushFlutterRoute:options];
+}
+
 @end

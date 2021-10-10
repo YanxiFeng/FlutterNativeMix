@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_project/pages/home.dart';
+import 'package:flutter_project/pages/select_city.dart';
 import 'package:flutter_project/pages/simple.dart';
 
 void main() {
@@ -26,6 +27,10 @@ class _MyAppState extends State<MyApp> {
     'simple': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
           settings: settings, pageBuilder: (_, __, ___) => SimplePageScreen());
+    },
+    'select_city': (settings, uniqueId) {
+      return PageRouteBuilder<dynamic>(
+          settings: settings, pageBuilder: (_, __, ___) => SelectCityPage());
     },
   };
 
