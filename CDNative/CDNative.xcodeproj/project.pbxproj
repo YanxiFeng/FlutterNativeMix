@@ -16,6 +16,7 @@
 		3C7CF5F626C3E1A100647223 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CF5F526C3E1A100647223 /* main.m */; };
 		3C8D042326C570A100853335 /* CDFlutterBoost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D042226C570A100853335 /* CDFlutterBoost.m */; };
 		3C8F3D5226C75FF1007FCB3B /* BoostBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F3D5126C75FF1007FCB3B /* BoostBaseViewController.m */; };
+		3C9ED2EB27204A9500A7106A /* CDNativeInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ED2EA27204A9500A7106A /* CDNativeInfo.plist */; };
 		3CA1D9E426DD1ABB0074E7F0 /* CDNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1D9E326DD1ABB0074E7F0 /* CDNetworkTool.m */; };
 		41A5201EDD9F7D7AE3E47886 /* Pods_CDNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD34F9881941CA90FCC69544 /* Pods_CDNative.framework */; };
 /* End PBXBuildFile section */
@@ -31,12 +32,12 @@
 		3C7CF5ED26C3E19E00647223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C7CF5EF26C3E1A100647223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C7CF5F226C3E1A100647223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3C7CF5F426C3E1A100647223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7CF5F526C3E1A100647223 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C8D042126C570A100853335 /* CDFlutterBoost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDFlutterBoost.h; sourceTree = "<group>"; };
 		3C8D042226C570A100853335 /* CDFlutterBoost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDFlutterBoost.m; sourceTree = "<group>"; };
 		3C8F3D5026C75FF1007FCB3B /* BoostBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoostBaseViewController.h; sourceTree = "<group>"; };
 		3C8F3D5126C75FF1007FCB3B /* BoostBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoostBaseViewController.m; sourceTree = "<group>"; };
+		3C9ED2EA27204A9500A7106A /* CDNativeInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CDNativeInfo.plist; sourceTree = "<group>"; };
 		3CA1D9E226DD1ABB0074E7F0 /* CDNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDNetworkTool.h; sourceTree = "<group>"; };
 		3CA1D9E326DD1ABB0074E7F0 /* CDNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDNetworkTool.m; sourceTree = "<group>"; };
 		74FA914D39DA6D9E6EA81DA0 /* Pods-CDNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNative.debug.xcconfig"; path = "Target Support Files/Pods-CDNative/Pods-CDNative.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +142,7 @@
 				3C7CF5EC26C3E19E00647223 /* Main.storyboard */,
 				3C7CF5EF26C3E1A100647223 /* Assets.xcassets */,
 				3C7CF5F126C3E1A100647223 /* LaunchScreen.storyboard */,
-				3C7CF5F426C3E1A100647223 /* Info.plist */,
+				3C9ED2EA27204A9500A7106A /* CDNativeInfo.plist */,
 				3C7CF5F526C3E1A100647223 /* main.m */,
 			);
 			path = CDNative;
@@ -216,6 +217,7 @@
 			files = (
 				3C7CF5F326C3E1A100647223 /* LaunchScreen.storyboard in Resources */,
 				3C7CF5F026C3E1A100647223 /* Assets.xcassets in Resources */,
+				3C9ED2EB27204A9500A7106A /* CDNativeInfo.plist in Resources */,
 				3C7CF5EE26C3E19E00647223 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = R9WT9T43ZM;
 				INFOPLIST_FILE = CDNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = R9WT9T43ZM;
 				INFOPLIST_FILE = CDNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

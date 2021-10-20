@@ -18,16 +18,12 @@ class SelectCityPage extends StatelessWidget {
           physics: AlwaysScrollableScrollPhysics(),
           cacheExtent: 40,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(
-                "Singapore1",
-                style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600),
-              ),
-              trailing: Icon(Icons.check),
-              contentPadding: EdgeInsets.fromLTRB(46, 0, 24, 0),
+            return Column(
+              children: [
+                Row(
+                  children: [Text("Shanghai"), Icon(Icons.check)],
+                ),
+              ],
             );
           },
           separatorBuilder: (context, index) {
