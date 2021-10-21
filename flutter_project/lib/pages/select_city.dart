@@ -12,27 +12,25 @@ class SelectCityPage extends StatelessWidget {
         ),
         title: Text("Select City"),
       ),
-      body: ListView.separated(
-          padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
-          shrinkWrap: true,
-          physics: AlwaysScrollableScrollPhysics(),
-          cacheExtent: 40,
+      body: Container(
+        color: Colors.blueGrey,
+        child: ListView.builder(
+          padding: EdgeInsets.only(top: 40.0),
           itemBuilder: (context, index) {
-            return Column(
-              children: [
-                Row(
-                  children: [Text("Shanghai"), Icon(Icons.check)],
-                ),
-              ],
+            return Container(
+              width: double.infinity,
+              height: 30,
+              color: Colors.greenAccent,
+              child: Center(
+                  child: Text(
+                'index:$index',
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              )),
             );
           },
-          separatorBuilder: (context, index) {
-            return Divider(
-              color: Colors.grey,
-              indent: 46,
-            );
-          },
-          itemCount: 8),
+          itemCount: 8,
+        ),
+      ),
     );
   }
 }
