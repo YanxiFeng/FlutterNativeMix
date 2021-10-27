@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
         context,
         MaterialPageRoute(
             builder: (context) => MXJSPageWidget(
-                  jsWidgetName: "mxflutter-homepage",
+                  jsWidgetName: "mxflutter-homepage", //mxflutter-homepage
                 )));
   }
 

@@ -18,20 +18,23 @@ runMXJSApp() async {
   {
     // 开发调试，为了方便验证，可以自己指定目录，只能用于iOS模拟器下。
     var debugJSBundlePath =
-        '/Users/Yvan/Desktop/Flutter/mxflutterdemo/mxflutter_js_bundle';
+        '/Users/Yvan/Desktop/Flutter/mxflutter/mxflutterdemo/mxflutter_js_bundle';
 
     MXJSFlutter.runJSApp(debugJSBundlePath: debugJSBundlePath);
   }
 
-  //-------1. 启动 MXFlutter---------
-  // 拷贝业务bundle到动态更新目录，准备好JS代码
-  // demo为了演示是每次启动拷贝到js bundle的更新目录，一般只有第一次或版本升级需要拷贝。
-  // 业务可以根据自身需求，来判断是否拷贝。此部分逻辑可以写在Dart侧，也可以写在Native侧
+  /** 
+   * -------1. 启动 MXFlutter---------
+   * 拷贝业务bundle到动态更新目录，准备好JS代码
+   * demo为了演示是每次启动拷贝到js bundle的更新目录，一般只有第一次或版本升级需要拷贝。
+   * 业务可以根据自身需求，来判断是否拷贝。此部分逻辑可以写在Dart侧，也可以写在Native侧
+   * 
   String jsBundlePath = await _copyBizBundelZipToMXPath();
   if (jsBundlePath != null) {
     // 启动 MXFlutter，加载JS库。
     MXJSFlutter.runJSApp(jsAppPath: jsBundlePath);
   }
+  */
 }
 
 Future<String> _copyBizBundelZipToMXPath(
