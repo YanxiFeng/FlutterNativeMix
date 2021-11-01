@@ -1,0 +1,6 @@
+framework module Pods_CDNative {
+  umbrella header "Pods-CDNative-umbrella.h"
+
+  export *
+  module * { export * }
+}
